@@ -1,23 +1,58 @@
 \documentclass[25pt, a0paper, portrait]{tsj-poster}
 
-% --- Paquetes Adicionales ---
-%\usepackage{xcolor}
-
 % --- Configuración del Estilo ---
-\usetheme{TSJ} 
+\usetheme{TSJ}
 
 % --- Información del Título ---
-\title{Título del Póster: Una Investigación Impactante bla bla bla bla}
-\author{Nombre del Autor 1, Autor 2}
-\institute{Departamento de Investigación, Universidad de Ejemplo}
+\title{Sistema de generación y calificación automática de reactivos
+de las materias de matemáticas a nivel medio superior}
+\author{Yolanda Alejo Huerta , M. Díaz-Rodríguez}
+\institute{Tecnológico Superior de Jalisco, Unidad Académica Zapopan,
+za240113432@zapopan.tecmm.edu.mx,
+miriam.diaz@zapopan.tecmm.edu.mx
+}
 
 \begin{document}
 
 \maketitle
 
-\block{~}
+\block{Resumen}
 {
- bla bla bla
+Este trabajo presenta el desarrollo de un asistente virtual enfocado
+en la evaluación automática de competencias técnicas en áreas de
+matemáticas a nivel media superior. La propuesta surge ante la
+necesidad de optimizar los procesos de enseñanza-aprendizaje en
+contextos donde la atención personalizada resulta limitada.
+\vspace{1em}
+
+La plataforma, denominada \textbf{Matefácil} versión \textbf{2.0},
+implementa una arquitectura basada en \textbf{MVC}
+(\emph{Modelo Vista Controlador}), utilizando
+tecnologías como \emph{PHP}, \emph{Laravel}, \emph{SQLite}.
+Su principal innovación radica en la generación
+dinámica de ejercicios matemáticos, específicamente fórmulas
+proposicionales, evitando el uso de bancos estáticos de reactivos.
+Y su uso en aulas, \emph{sin necesidad de Internet.}
+\vspace{1em}
+
+El sistema crea una \textbf{red local/interna} donde el alumno se conecta y
+realiza los ejercicios desde \emph{su computadora} o su \emph{telefono móvil}.
+Además permite configurar parámetros de complejidad, generando
+ejercicios únicos para cada usuario. Adicionalmente integra un módulo de
+evaluación automática de estos ejercicios, proporcionando
+retroalimentación inmediata.
+\vspace{1em}
+
+Los resultados evidencian mejoras en la eficiencia docente y en el
+\emph{aprendizaje autónomo} de los estudiantes, posicionando esta
+herramienta como una solución escalable para entornos educativos digitales.
+
+\vspace{2em}
+{
+\color{titlefgcolor}
+\bfseries \Large Palabras Clave \par
+}
+Evaluación automática; matemáticas; generación dinámica; educación digital
 }
 
 \begin{columns}
@@ -35,3 +70,4 @@
 \end{columns}
 
 \end{document}
+
