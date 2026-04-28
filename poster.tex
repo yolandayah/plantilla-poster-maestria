@@ -63,15 +63,30 @@ Evaluación automática; matemáticas; generación dinámica; educación digital
 \block{I. Introducción}{
 En la actualidad, la educación enfrenta el reto de adaptarse a
 entornos digitales cada vez más dinámicos, donde el uso de
-Tecnologías de la Información y la Comunicación (TIC) es
-fundamental para mejorar los procesos de enseñanza-aprendizaje.
+\textbf{Tecnologías de la Información y la Comunicación} (TIC) es
+fundamental para mejorar los procesos de \emph{enseñanza-aprendizaje}.
 \vspace{1em}
 
-Plataformas como Google Classroom, Moodle y los MOOC han permitido
+Plataformas como \textbf{Google Classroom}, \textbf{Moodle} y
+los \emph{cursos en línea masivos y abiertos} o \textbf{MOOC} (acrónimo
+en inglés de \emph{massive open online courses}) han permitido
 ampliar el acceso a recursos educativos; sin embargo, aún existen
 desafíos importantes en la personalización del aprendizaje y la
 evaluación continua.
 \vspace{1em}
+
+\begin{center}
+\includegraphics[height=3cm]{img/g-classroom.png}
+\hspace{1em}
+\includegraphics[height=3cm]{img/g-forms.png}
+\hspace{1em}
+\includegraphics[height=3cm]{img/ms-forms.png}
+\hspace{1em}
+\includegraphics[height=3cm]{img/canvas.png}
+\hspace{1em}
+\includegraphics[height=3cm]{img/moodle.png}
+\end{center}
+
 
 En áreas como la lógica, las matemáticas y la física, los estudiantes
 requieren práctica constante mediante la resolución de ejercicios.
@@ -83,6 +98,7 @@ En este contexto, se propone el desarrollo de una plataforma
 inteligente que automatiza la generación de ejercicios y su evaluación,
 permitiendo ofrecer una experiencia personalizada al estudiante
 y optimizando el tiempo del profesor.
+
 }
 \block{II. Objetivos}{
 {
@@ -94,7 +110,7 @@ y optimizando el tiempo del profesor.
 Desarrollar un asistente virtual que permita la generación
 y evaluación automática de ejercicios matemáticos para apoyar
 la adquisición de competencias técnicas en estudiantes de
-áreas computacionales.
+educación media superior.
 
 \vspace{1em}
 {
@@ -104,19 +120,84 @@ la adquisición de competencias técnicas en estudiantes de
 
 \vspace{1em}
 \begin{itemize}
-  \item Diseñar una arquitectura web escalable basada en el modelo MTV.
-  \item Implementar algoritmos para la generación automática de
-        fórmulas proposicionales.
-  \item Desarrollar un módulo de evaluación automática basado en
-        tablas de verdad.
+  \item Diseñar una arquitectura web escalable basada en el modelo MVC.
   \item Permitir la configuración de la complejidad de los ejercicios.
   \item Evaluar el desempeño del sistema en entornos educativos reales.
+  \item Acceso al sistema sin necesidad de internet.
 \end{itemize}
+}
+
+\block{III. Metodología}{
+{
+\color{titlefgcolor}
+\bfseries \large A. Diseño del sistema \par
+}
+
+Se diseñó una plataforma web utilizando el patrón arquitectónico
+Modelo-Vista-Controlador (MVC) que permite separar la lógica de
+negocio, la presentación y la gestión de datos.
+
+\begin{minipage}{0.3\textwidth}
+El sistema esta siendo desarrollado con:
+
+\begin{itemize}
+  \item Backend: PHP (Laravel)
+  \item Base de datos: SQLite
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{\textwidth}
+  \includegraphics[height=6cm]{img/mvc.jpg}
+\end{minipage}
+
+{
+\color{titlefgcolor}
+\bfseries \large B. Generación de ejercicios \par
+}
+
+Se desarrolló un generador automático de fórmulas matemáticas basado en:
+
+\begin{itemize}
+ \item Temas actuales de educación media superior
+ \item Selección aleatoria de operadores lógico/matemáticos
+\end{itemize}
+
+\vspace{1em}
+Esto permite generar problemas con distintos niveles de dificultad.
+
 }
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \column{0.5}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\block{~}{
+{
+\color{titlefgcolor}
+\bfseries \large C. Evaluación automática \par
+}
+
+Se implementó un evaluador que:
+
+\begin{itemize}
+ \item Genera todas las posibles valuaciones
+ \item Resuelve los ejercicios según los parámetros iniciales
+\end{itemize}
+
+Compara los resultados automáticos con las respuestas del estudiante
+
+
+{
+\color{titlefgcolor}
+\bfseries \large D. Servidor local \par
+}
+
+Uso de una Raspberry Pi o una NUC como servidor local en el salón.
+
+\includegraphics[height=4cm]{img/nuc.png}
+\hspace{1em}
+\includegraphics[height=4cm]{img/rpi.png}
+}
 
 \block{IV. Experimentos}{
 
@@ -129,16 +210,16 @@ sistema bajo diferentes condiciones:
  \item Pruebas de interacción con usuarios (estudiantes)
 \end{itemize}
 
-Se midieron variables como:
-
-\begin{itemize}
- \item Tiempo de generación de ejercicios
- \item Precisión en la evaluación
- \item Capacidad de escalabilidad
-\end{itemize}
-
-Los resultados se compararon con métodos tradicionales de evaluación
-manual.
+%Se midieron variables como:
+%
+%\begin{itemize}
+% \item Tiempo de generación de ejercicios
+% \item Precisión en la evaluación
+% \item Capacidad de escalabilidad
+%\end{itemize}
+%
+%Los resultados se compararon con métodos tradicionales de evaluación
+%manual.
 }
 
 \block{V. Resultados y Conclusiones}{
@@ -152,7 +233,7 @@ manual.
  \item Generación automática de ejercicios únicos por usuario
  \item Reducción significativa del tiempo de evaluación docente
  \item Incremento en la práctica autónoma de los estudiantes
- \item Retroalimentación inmediata y personalizada[7.1]
+ \item Retroalimentación inmediata y personalizada
 \end{itemize}
 \vspace{1em}
 
@@ -177,42 +258,28 @@ Se identifica como trabajo futuro:
 }
 
 \block{VI. Referencias}{
+  \small
   \begin{itemize}
-   \item[1]    P. H. Bonet, G. R. Romero, M. Alejandra, H. Bonet, y R.
+   \item[[1]]    P. H. Bonet, G. R. Romero, M. Alejandra, H. Bonet, y R.
      Llanos Díaz, “Análisis de las tendencias educativas con relación
      al desarrollo de las competencias digitales”, RiiTE Revista
      Interuniversitaria de Investigación en Tecnología Educativa,
      pp. 158–174, jun. 2022, doi: 10.6018/RIITE.520771.
-   \item[2]	A. S. Rosal y G. V. Acevedo, “Identificación de
+   \item[[2]]	A. S. Rosal y G. V. Acevedo, “Identificación de
      competencias educativas desarrolladas en contextos de aprendizaje
      virtual”, Revista Guatemalteca de Educación Superior, vol. 5,
      núm. 1, pp. 13–22, nov. 2021, doi: 10.46954/revistages.v5i1.68.
-   \item[3]	M. Y. T. Castro, P. V. Yataco, M. I. V. Valdivia, y G. S.
+   \item[[3]]	M. Y. T. Castro, P. V. Yataco, M. I. V. Valdivia, y G. S.
      L. López, “Desarrollo de las competencias matemáticas en entornos
      virtuales. Una Revisión Sistemática”, Alpha Centauri, vol. 3, núm.
      2, pp. 46–59, may 2022, doi: 10.47422/ac.v3i2.80.
-   \item[4]	J. Francisco Romero-Córdova y R. Arriazu Muñoz, “El
+   \item[[4]]	J. Francisco Romero-Córdova y R. Arriazu Muñoz, “El
      aprendizaje de competencias en los MOOC. Una revisión sistemática
      de la literatura - Learning competencies in MOOCs. A systematic
      literature review”, 2023, doi: 10.17398/1695-288X.22.1.107.
   \end{itemize}
 }
-
 \end{columns}
-
-\node [above right,
-       outer sep=0pt,
-       minimum width=\paperwidth-2*\pgflinewidth,
-       minimum height=7cm,
-       align=center,font=\Huge,
-       draw,fill=titlefgcolor,text=titlebgcolor,
-       ultra thick] at ([shift={(0.5*\pgflinewidth,0.5*\pgflinewidth)}]bottomleft) {
-\includegraphics[height=5cm]{img/tecmm.png}
-\hfill
-{\bfseries \Huge Algún texto}
-\hfill
-\includegraphics[height=5cm]{img/tsj.png}
-};
 
 \end{document}
 
